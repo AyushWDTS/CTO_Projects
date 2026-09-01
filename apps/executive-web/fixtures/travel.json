@@ -1,0 +1,14 @@
+{
+  "source": "fixture",
+  "title": "Travel",
+  "trips": [
+    {
+      "id": "trip-1",
+      "destination": "Las Vegas",
+      "purpose": "G2E / partner meetings",
+      "depart": "2026-09-28",
+      "return": "2026-10-03",
+      "status": "tentative"
+    }
+  ]
+}

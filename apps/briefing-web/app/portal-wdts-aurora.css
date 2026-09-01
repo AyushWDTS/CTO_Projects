@@ -1,0 +1,117 @@
+/* ==========================================================================
+   WDTS theme-set overrides
+   Theme set: "Aurora"
+   Purpose: keep portal.wdts.css fully intact while enabling a second visual
+   system via [data-theme-set="wdts-aurora"] on <html>.
+   Flexibility: semantic tokens are derived from WDTS brand tokens.
+   ========================================================================== */
+
+:root[data-theme-set="wdts-aurora"] {
+  /* Brand-token selector (defaults to teal, override via data-brand-token). */
+  --aurora-brand-primary: var(--wdts-teal);
+  --aurora-brand-warm: var(--wdts-orange);
+
+  /* Surfaces and lines keep a calm cool-neutral foundation. */
+  --bg:        #f5f8fc;
+  --bg-main:   #ffffff;
+  --surface:   #ffffff;
+  --surface-2: #eef3f8;
+  --sidebar:   #f3f8fd;
+  --line:      #d4dce5;
+  --line-2:    #e6ecf2;
+  --line-str:  #b8c4d1;
+
+  /* Semantic accents are derived from selected brand tokens. */
+  --primary: var(--aurora-brand-primary);
+  --primary-dark: color-mix(in srgb, var(--aurora-brand-primary) 82%, #000000);
+  --primary-wash: color-mix(in srgb, var(--aurora-brand-primary) 14%, transparent);
+  --primary-line: color-mix(in srgb, var(--aurora-brand-primary) 34%, transparent);
+  --accent: var(--aurora-brand-primary);
+  --accent-2: color-mix(in srgb, var(--aurora-brand-primary) 68%, #000000);
+  --accent-wash: color-mix(in srgb, var(--aurora-brand-primary) 12%, transparent);
+  --accent-line: color-mix(in srgb, var(--aurora-brand-primary) 30%, transparent);
+
+  /* State feedback also derives from WDTS brand tokens. */
+  --ok:      var(--wdts-teal);
+  --ok-bg:   color-mix(in srgb, var(--ok) 10%, #ffffff);
+  --ok-line: color-mix(in srgb, var(--ok) 28%, #ffffff);
+  --warn:      var(--aurora-brand-warm);
+  --warn-bg:   color-mix(in srgb, var(--warn) 10%, #ffffff);
+  --warn-line: color-mix(in srgb, var(--warn) 28%, #ffffff);
+  --err:      color-mix(in srgb, var(--wdts-deep-red) 82%, #000000);
+  --err-bg:   color-mix(in srgb, var(--err) 9%, #ffffff);
+  --err-line: color-mix(in srgb, var(--err) 24%, #ffffff);
+
+  /* Header + action emphasis follows the chosen primary token. */
+  --header-bg: var(--aurora-brand-primary);
+  --header-border: 0;
+  --solid-bg: var(--aurora-brand-primary);
+  --solid-fg: #ffffff;
+  --solid-bg-hover: color-mix(in srgb, var(--aurora-brand-primary) 82%, #000000);
+  --btn-base: var(--aurora-brand-primary);
+  --btn-hover: color-mix(in srgb, var(--aurora-brand-primary) 82%, #000000);
+  --btn-fg: #ffffff;
+  --btn-ring: color-mix(in srgb, var(--btn-base) 32%, transparent);
+  --selection-bg: var(--aurora-brand-primary);
+  --selection-fg: #ffffff;
+}
+
+:root[data-theme-set="wdts-aurora"][data-brand-token="deep-red"] {
+  --aurora-brand-primary: var(--wdts-deep-red);
+}
+:root[data-theme-set="wdts-aurora"][data-brand-token="orange"] {
+  --aurora-brand-primary: var(--wdts-orange);
+}
+:root[data-theme-set="wdts-aurora"][data-brand-token="gold"] {
+  --aurora-brand-primary: var(--wdts-gold);
+}
+:root[data-theme-set="wdts-aurora"][data-brand-token="teal"] {
+  --aurora-brand-primary: var(--wdts-teal);
+}
+:root[data-theme-set="wdts-aurora"][data-brand-token="purple"] {
+  --aurora-brand-primary: var(--wdts-purple);
+}
+:root[data-theme-set="wdts-aurora"][data-brand-token="charcoal"] {
+  --aurora-brand-primary: var(--wdts-charcoal);
+}
+
+:root[data-theme-set="wdts-aurora"][data-theme="dark"] {
+  --bg:        #111827;
+  --bg-main:   #141f31;
+  --surface:   #1a2940;
+  --surface-2: #20324d;
+  --sidebar:   #142236;
+
+  --ink:    #f4f7fb;
+  --ink-2:  #e3eaf3;
+  --text:   #d2dbe7;
+  --muted:  #aebccd;
+  --dim:    #92a2b7;
+
+  --line:     rgba(197,214,237,0.22);
+  --line-2:   rgba(197,214,237,0.12);
+  --line-str: rgba(197,214,237,0.32);
+
+  --primary: color-mix(in srgb, var(--aurora-brand-primary) 42%, #ffffff);
+  --primary-dark: color-mix(in srgb, var(--aurora-brand-primary) 22%, #ffffff);
+  --primary-wash: color-mix(in srgb, var(--primary) 16%, transparent);
+  --primary-line: color-mix(in srgb, var(--primary) 38%, transparent);
+  --accent: var(--primary);
+  --accent-2: color-mix(in srgb, var(--primary) 62%, #ffffff);
+  --accent-wash: color-mix(in srgb, var(--accent) 18%, transparent);
+  --accent-line: color-mix(in srgb, var(--accent) 34%, transparent);
+
+  --header-bg: color-mix(in srgb, var(--aurora-brand-primary) 22%, #000000);
+  --footer-surface: #0c1828;
+  --backdrop-bg: rgba(5, 10, 18, 0.64);
+
+  --solid-bg: var(--primary);
+  --solid-fg: #0b1f36;
+  --solid-bg-hover: color-mix(in srgb, var(--primary) 74%, #ffffff);
+  --btn-base: var(--primary);
+  --btn-hover: color-mix(in srgb, var(--primary) 74%, #ffffff);
+  --btn-fg: #0b1f36;
+  --btn-ring: color-mix(in srgb, var(--btn-base) 40%, transparent);
+  --selection-bg: var(--primary);
+  --selection-fg: #0b1f36;
+}

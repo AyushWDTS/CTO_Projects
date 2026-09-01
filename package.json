@@ -1,0 +1,8 @@
+{
+  "name": "cto-project",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/js/*"
+  ]
+}

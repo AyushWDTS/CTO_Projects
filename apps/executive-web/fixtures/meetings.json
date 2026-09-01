@@ -1,0 +1,20 @@
+{
+  "source": "fixture",
+  "title": "Meetings",
+  "items": [
+    {
+      "id": "mtg-1",
+      "title": "Weekly ops standup",
+      "when": "2026-08-13T09:30:00+05:30",
+      "organizer": "EA Desk",
+      "joinUrl": null
+    },
+    {
+      "id": "mtg-2",
+      "title": "Vendor briefing",
+      "when": "2026-08-14T16:00:00+05:30",
+      "organizer": "Procurement",
+      "joinUrl": null
+    }
+  ]
+}

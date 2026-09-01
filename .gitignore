@@ -1,0 +1,62 @@
+# Dependencies & build
+node_modules/
+**/node_modules/
+.next/
+**/.next/
+out/
+**/out/
+dist/
+**/dist/
+build/
+**/build/
+*.tsbuildinfo
+
+# Python
+**/.venv/
+**/venv/
+**/__pycache__/
+**/*.egg-info/
+**/.pytest_cache/
+**/.ruff_cache/
+**/.mypy_cache/
+*.pyc
+.coverage
+htmlcov/
+coverage/
+.tox/
+
+# Env & secrets — keep only *.example files
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+*.pem
+*.p12
+*.key
+credentials.json
+**/secrets/
+
+# OS / IDE / Cursor
+.DS_Store
+.idea/
+.vscode/
+.cursor/
+
+# Logs & debug
+*.log
+npm-debug.log*
+debug-*.log
+.cursor/debug-*.log
+
+# Test / Playwright artifacts
+playwright-report/
+test-results/
+coverage/
+
+# Celery / local runtime
+celerybeat-schedule
+*.sqlite
+*.sqlite3
+*.db

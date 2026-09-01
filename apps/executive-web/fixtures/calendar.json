@@ -1,0 +1,21 @@
+{
+  "source": "fixture",
+  "title": "Calendar",
+  "timezone": "Asia/Kolkata",
+  "events": [
+    {
+      "id": "evt-1",
+      "title": "Leadership sync",
+      "start": "2026-08-13T10:00:00+05:30",
+      "end": "2026-08-13T10:45:00+05:30",
+      "location": "Teams"
+    },
+    {
+      "id": "evt-2",
+      "title": "Product review",
+      "start": "2026-08-13T14:00:00+05:30",
+      "end": "2026-08-13T15:00:00+05:30",
+      "location": "HQ — Board room"
+    }
+  ]
+}

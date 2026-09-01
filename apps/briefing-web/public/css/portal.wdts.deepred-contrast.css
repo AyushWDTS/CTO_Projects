@@ -1,0 +1,134 @@
+/* ==========================================================================
+   WDTS theme-set overrides
+   Theme set: "Deep Red Contrast"
+   Purpose: keep a fixed WDTS deep-red header while driving the rest of the
+   page from a contrast/complementary brand token.
+   ========================================================================== */
+
+:root[data-theme-set="wdts-deepred-contrast"] {
+  /* Contrast token selector (defaults to teal). */
+  --contrast-brand-primary: var(--wdts-teal);
+  --contrast-brand-hover: color-mix(in srgb, var(--contrast-brand-primary) 82%, #000000);
+  --contrast-on-primary: #ffffff;
+  --contrast-brand-warm: var(--wdts-gold);
+
+  /* Header always stays deep red. */
+  --header-bg: var(--wdts-deep-red);
+  --header-border: 0;
+
+  /* Cool-neutral canvas so deep-red header stands out. */
+  --bg:        #f6f8f8;
+  --bg-main:   #ffffff;
+  --surface:   #ffffff;
+  --surface-2: color-mix(in srgb, var(--contrast-brand-primary) 5%, #ffffff);
+  /* Sidebar softly follows selected brand token for cohesive identity. */
+  --sidebar:   color-mix(in srgb, var(--contrast-brand-primary) 9%, #ffffff);
+  --line:      color-mix(in srgb, var(--contrast-brand-primary) 20%, #d2dcda);
+  --line-2:    color-mix(in srgb, var(--contrast-brand-primary) 14%, #e3ecea);
+  --line-str:  color-mix(in srgb, var(--contrast-brand-primary) 26%, #b8c8c4);
+
+  /* Core semantic accents are driven by selected contrast token. */
+  --primary: var(--contrast-brand-primary);
+  --primary-dark: color-mix(in srgb, var(--contrast-brand-primary) 82%, #000000);
+  --primary-wash: color-mix(in srgb, var(--contrast-brand-primary) 14%, transparent);
+  --primary-line: color-mix(in srgb, var(--contrast-brand-primary) 34%, transparent);
+  --accent: var(--contrast-brand-primary);
+  --accent-2: color-mix(in srgb, var(--contrast-brand-primary) 68%, #000000);
+  --accent-wash: color-mix(in srgb, var(--contrast-brand-primary) 12%, transparent);
+  --accent-line: color-mix(in srgb, var(--contrast-brand-primary) 30%, transparent);
+
+  /* Stateful colors from WDTS tokens. */
+  --ok:      var(--wdts-teal);
+  --ok-bg:   color-mix(in srgb, var(--ok) 10%, #ffffff);
+  --ok-line: color-mix(in srgb, var(--ok) 28%, #ffffff);
+  --warn:      var(--contrast-brand-warm);
+  --warn-bg:   color-mix(in srgb, var(--warn) 12%, #ffffff);
+  --warn-line: color-mix(in srgb, var(--warn) 30%, #ffffff);
+  --err:      var(--wdts-deep-red);
+  --err-bg:   color-mix(in srgb, var(--err) 9%, #ffffff);
+  --err-line: color-mix(in srgb, var(--err) 24%, #ffffff);
+
+  /* Buttons and major actions follow contrast token (not header token). */
+  --solid-bg: var(--contrast-brand-primary);
+  --solid-fg: var(--contrast-on-primary);
+  --solid-bg-hover: var(--contrast-brand-hover);
+  --btn-base: var(--contrast-brand-primary);
+  --btn-hover: var(--contrast-brand-hover);
+  --btn-fg: var(--contrast-on-primary);
+  --btn-ring: color-mix(in srgb, var(--btn-base) 32%, transparent);
+  --selection-bg: var(--contrast-brand-primary);
+  --selection-fg: var(--contrast-on-primary);
+}
+
+:root[data-theme-set="wdts-deepred-contrast"][data-brand-token="deep-red"] {
+  --contrast-brand-primary: var(--wdts-deep-red);
+  --contrast-brand-hover: color-mix(in srgb, var(--wdts-deep-red) 82%, #000000);
+  --contrast-on-primary: #ffffff;
+}
+:root[data-theme-set="wdts-deepred-contrast"][data-brand-token="orange"] {
+  --contrast-brand-primary: var(--wdts-orange);
+  --contrast-brand-hover: color-mix(in srgb, var(--wdts-orange) 72%, #ffffff);
+  --contrast-on-primary: #202327;
+}
+:root[data-theme-set="wdts-deepred-contrast"][data-brand-token="gold"] {
+  --contrast-brand-primary: var(--wdts-gold);
+  --contrast-brand-hover: color-mix(in srgb, var(--wdts-gold) 68%, #ffffff);
+  --contrast-on-primary: #202327;
+}
+:root[data-theme-set="wdts-deepred-contrast"][data-brand-token="teal"] {
+  --contrast-brand-primary: var(--wdts-teal);
+  --contrast-brand-hover: color-mix(in srgb, var(--wdts-teal) 82%, #000000);
+  --contrast-on-primary: #ffffff;
+}
+:root[data-theme-set="wdts-deepred-contrast"][data-brand-token="purple"] {
+  --contrast-brand-primary: var(--wdts-purple);
+  --contrast-brand-hover: color-mix(in srgb, var(--wdts-purple) 82%, #000000);
+  --contrast-on-primary: #ffffff;
+}
+:root[data-theme-set="wdts-deepred-contrast"][data-brand-token="charcoal"] {
+  --contrast-brand-primary: var(--wdts-charcoal);
+  --contrast-brand-hover: color-mix(in srgb, var(--wdts-charcoal) 82%, #000000);
+  --contrast-on-primary: #ffffff;
+}
+
+:root[data-theme-set="wdts-deepred-contrast"][data-theme="dark"] {
+  --bg:        #1f2325;
+  --bg-main:   #252a2d;
+  --surface:   #2b3135;
+  --surface-2: color-mix(in srgb, var(--contrast-brand-primary) 10%, #31383d);
+  --sidebar:   color-mix(in srgb, var(--contrast-brand-primary) 14%, #252b2f);
+
+  --ink:    #f4f6f7;
+  --ink-2:  #e9ecee;
+  --text:   #d4d9dc;
+  --muted:  #b2bcc2;
+  --dim:    #97a4ac;
+
+  --line:     color-mix(in srgb, var(--contrast-brand-primary) 20%, rgba(210,224,220,0.14));
+  --line-2:   color-mix(in srgb, var(--contrast-brand-primary) 14%, rgba(210,224,220,0.08));
+  --line-str: color-mix(in srgb, var(--contrast-brand-primary) 26%, rgba(210,224,220,0.22));
+
+  --primary: color-mix(in srgb, var(--contrast-brand-primary) 48%, #ffffff);
+  --primary-dark: color-mix(in srgb, var(--contrast-brand-primary) 26%, #ffffff);
+  --primary-wash: color-mix(in srgb, var(--primary) 18%, transparent);
+  --primary-line: color-mix(in srgb, var(--primary) 38%, transparent);
+  --accent: var(--primary);
+  --accent-2: color-mix(in srgb, var(--primary) 66%, #ffffff);
+  --accent-wash: color-mix(in srgb, var(--accent) 20%, transparent);
+  --accent-line: color-mix(in srgb, var(--accent) 36%, transparent);
+
+  /* Keep deep-red header identity in dark mode as well. */
+  --header-bg: color-mix(in srgb, var(--wdts-deep-red) 76%, #000000);
+  --footer-surface: #1a1f22;
+  --backdrop-bg: rgba(0,0,0,0.58);
+
+  --solid-bg: var(--primary);
+  --solid-fg: #122126;
+  --solid-bg-hover: color-mix(in srgb, var(--primary) 76%, #ffffff);
+  --btn-base: var(--primary);
+  --btn-hover: color-mix(in srgb, var(--primary) 76%, #ffffff);
+  --btn-fg: #122126;
+  --btn-ring: color-mix(in srgb, var(--btn-base) 42%, transparent);
+  --selection-bg: var(--primary);
+  --selection-fg: #122126;
+}

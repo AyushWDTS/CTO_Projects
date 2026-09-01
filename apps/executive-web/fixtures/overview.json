@@ -1,0 +1,10 @@
+{
+  "source": "fixture",
+  "title": "Executive overview",
+  "summary": "Calendar, meetings, and travel shells for CTO leadership.",
+  "stats": [
+    { "label": "Meetings today", "value": 4 },
+    { "label": "Upcoming trips", "value": 1 },
+    { "label": "Open holds", "value": 2 }
+  ]
+}
